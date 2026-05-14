@@ -110,7 +110,7 @@ const MOB_HEADERS={
 };
 
 // 실제 API 호출 구조 — 현재는 지연 시뮬레이션, 실 API 연동 시 아래 fetch 주석 해제
-const fetchWithMobileBypass=async<T>(url:string,fallback:()=>T):Promise<T>=>{
+const fetchWithMobileBypass = async <T,>(url: string, fallback: () => T): Promise<T> => {
   const delay=400+Math.random()*1200;
   await new Promise(r=>setTimeout(r,delay));
   // 실제 API 연동 예시 (CORS 허용 서버 필요):
